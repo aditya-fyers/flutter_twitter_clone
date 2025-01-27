@@ -4,16 +4,13 @@ on:
   pull_request:
     branches:
       - '**'  # Trigger on all branches
-#   pull_request:
-#     branches:
-#       - '**'  # Trigger on all pull requests
 
 jobs:
   sbom-and-vuln-scan:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
+      # Step 1: Checkout the repository changes
       - name: Checkout Code
         uses: actions/checkout@v3
 
